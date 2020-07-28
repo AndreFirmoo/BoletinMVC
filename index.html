@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modelo.css">
+    <title>Modelo EX</title>
+</head>
+<body >
+    <header>Média do aluno</header>
+    <section>
+        <div>Notas do aluno</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Materia</th>
+                    <th>1 Bim</th>
+                    <th>2 Bim</th>
+                    <th>3 Bim</th>
+                    <th>4 Bim</th>
+                    <th>Media</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                
+            </tbody>
+        </table>
+
+        <form id="adicionarAluno">
+            <label for="nomeAluno">Nome do Aluno: </label>
+            <input type="text" name="nomeAluno" class="teste" id="nomeAluno" >
+            
+            <label for="materiaAluno">Materia: </label>
+            <input type="text" name="materiaAluno" id="materiaAluno">
+            
+            <label for="primeiroNota">Nota 1 Bimestre: </label>
+            <input type="text" name="primeiroNota" id="primeiroNota">
+            
+            <label for="segundoNota">Nota 2 Bimestre: </label>
+            <input type="text" name="segundoNota" id="segundoNota">
+            
+            <label for="terceiroNota">Nota 3 Bimestre: </label>
+            <input type="text" name="terceiroNota" id="terceiroNota">
+            
+            <label for="quartoNota">Nota 4 Bimestre: </label>
+            <input type="text" name="quartoNota" id="quartoNota">
+            
+            <button id="enviarAluno" onclick="aluno.mandarView(event)" type="submit">Enviar</button>
+            <button id="limparAluno" type="submit">Limpar</button>
+        </form>
+
+        <h3>Desafio:</h3>
+        <h4>Preencher o formulario e quando clicar em enviar deve preencher a tabela com as informacoes do formulario</h4>
+        <h4>Ao preencher a tabela o formulario deve ficar em branco (Resetando o formulario)</h4>
+    </section>
+    <footer>&copy; <img class="foto" src="./assets/Images/logoDark.png"> </footer>
+    <script src="./assets/js/Model/BoletinModel.js"></script>
+    <script src="./assets/js/Controller/BoletinController.js"></script>
+    <script src="./assets/js/Model/ListaBoletin.js"></script>
+    <script src="./assets/js/View/BoletinView.js"></script>
+    <script>
+        let aluno = new BoletinController()
+    </script>
+</body>
+</html>
